@@ -79,8 +79,7 @@ public:
     {
         if (head == nullptr) 
         {
-            std::cerr << "Error: an attempt to remove an item from an empty list.\n";
-            return;
+            throw std::underflow_error("Error: an attempt to remove an item from an empty list.");
         }
 
         Node<T>* temp = head;
@@ -101,8 +100,7 @@ public:
 
         if (tail == nullptr) 
         {
-            std::cerr << "Error: an attempt to remove an item from an empty list.\n";
-            return;
+            throw std::underflow_error("Error: an attempt to remove an item from an empty list.");
         }
 
         Node<T>* temp = tail;
